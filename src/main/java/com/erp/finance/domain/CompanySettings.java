@@ -14,8 +14,7 @@ public class CompanySettings {
     @Column(nullable = false)
     private String companyName;
     
-    @Lob
-    @Column(columnDefinition = "CLOB")
+    @Column(columnDefinition = "TEXT")
     private String companyLogo; // URL or base64 encoded image
     
     @Column(length = 500)
@@ -34,12 +33,10 @@ public class CompanySettings {
     private String taxId; // Tax ID / VAT number
     private String registrationNumber;
     
-    @Lob
-    @Column(columnDefinition = "CLOB")
+    @Column(columnDefinition = "TEXT")
     private String invoiceFooterMessage; // "Thank you for your business!"
     
-    @Lob
-    @Column(columnDefinition = "CLOB")
+    @Column(columnDefinition = "TEXT")
     private String termsAndConditions;
     
     private String currency; // USD, EUR, etc.
